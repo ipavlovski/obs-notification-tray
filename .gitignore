@@ -1,0 +1,21 @@
+# Build output (build.cmd / package.cmd)
+bin/
+dist/
+obj/
+
+# Local/portable configs and files the app writes next to them
+config.json
+*.bak
+*.tmp
+
+# --render-icons default output folder
+icon-preview/
+
+# Editor / OS clutter
+.vs/
+.vscode/
+*.user
+*.suo
+Thumbs.db
+Desktop.ini
+.DS_Store

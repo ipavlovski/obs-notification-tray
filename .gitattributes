@@ -1,0 +1,7 @@
+* text=auto
+
+# Windows scripts are run by cmd.exe / Inno Setup - keep CRLF on checkout.
+*.cmd text eol=crlf
+*.iss text eol=crlf
+
+*.ico binary

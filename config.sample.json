@@ -1,0 +1,29 @@
+// Copy to config.json next to ObsRecIndicator.exe and edit.
+// Whole-line // comments are allowed; trailing commas are not.
+{
+  // Folder where Source Record writes files (a tracker can override with "folder").
+  "watchFolder": "%USERPROFILE%\\Videos",
+  "includeSubfolders": false,
+
+  // How often to check file sizes, and how long a file may stop growing before
+  // it counts as "not recording".
+  "pollIntervalMs": 1000,
+  "inactiveAfterSeconds": 5,
+
+  // "hide" = icon only appears while recording; "grey" = greyed-out icon while idle.
+  "idleBehavior": "hide",
+
+  // Base icon: an .exe/.dll (first icon is used), .ico or .png.
+  "baseIcon": "%ProgramFiles%\\obs-studio\\bin\\64bit\\obs64.exe",
+  "indicatorColor": "#E81123",
+
+  // One tray icon per entry, in this order.
+  // pattern: wildcard(s) matched against file names; separate several with ';'.
+  // overlay: image drawn bottom-right (.png/.ico/.exe). If omitted, a colored
+  //          badge with overlayText (default: first letter of name) is drawn instead.
+  "trackers": [
+    { "name": "Game",    "pattern": "Game *.mkv",    "overlayText": "G", "overlayColor": "#2D7DE0" },
+    { "name": "Browser", "pattern": "Browser *.mkv", "overlay": "%ProgramFiles%\\Google\\Chrome\\Application\\chrome.exe" },
+    { "name": "Webcam",  "pattern": "Webcam *.mkv;Webcam *.mp4", "overlayText": "W", "overlayColor": "#18A558" }
+  ]
+}
